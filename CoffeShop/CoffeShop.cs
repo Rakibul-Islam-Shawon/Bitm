@@ -12,22 +12,21 @@ namespace CoffeShop
 {
     public partial class CoffeShop : Form
     {
-        const int size = 10;
-        string[] customerName = new string[size];
-        string[] contactNo = new string[size];
-        string[] address = new string[size];
-        string[] order = new string[size];
 
-        int[] quantity = new int[size];
-        int[] num = new int[size];
+        List<string> customerNames = new List<string>();
+        List<string> contactNo = new List<string>();
+        List<string> address = new List<string>();
+        List<string> order = new List<string>();
 
-        int[] totalPrice = new int[size];
+        List<int> quantity = new List<int>();
+        List<int> num= new List<int>();
+        List<int> totalPrices = new List<int>();
+
+       
         private int black = 120;
         private int cold = 100;
         private int hot = 90;
         private int regular = 80;
-
-        string message = " ";
 
 
         public CoffeShop()
@@ -38,45 +37,58 @@ namespace CoffeShop
 
         public void SaveButton_Click(object sender, EventArgs e)
         {
-            int index = 0;
            
-            customerName[index] = customerNameTextBox.Text;
-            contactNo[index] = contactNoTextBox.Text;
-            address[index] = addressTextBox.Text;
-            quantity[index] = Convert.ToInt16(quantityTextBox.Text);
-            order[index] = itemComboBox.Text;
-            
+            customerNames.Add(customerNameTextBox.Text);
+            contactNo.Add(contactNoTextBox.Text);
+            address.Add(addressTextBox.Text);
+            quantity.Add(Convert.ToInt32(quantityTextBox.Text));
+            order.Add(itemComboBox.Text);
 
-            if (order[index] == "Black")
+            string message = " ";
+
+            int index = 0;
+
+            foreach (string customerName in customerNames)
             {
-                totalPrice[index] = black * quantity[index];
+
+               if (order[index] == "Black")
+                {
+                    
+                    totalPrices.Insert(index, (black * quantity[index]));
+                }
+
+                else if (order[index] == "Hot")
+                {
+
+                    totalPrices.Insert(index, (hot * quantity[index]));
+                }
+                else if (order[index] == "Cold")
+                {
+                    totalPrices.Insert(index, (cold * quantity[index]));
+
+                }
+                else if (order[index] == "Regular")
+                {
+                    totalPrices.Insert(index, (regular * quantity[index]));
+                }
+
+                message = message + "Name: " + customerName+ "\nContact No: " + contactNo[index] + "\nAddress: " + address[index] + "\nOrder: " + order[index] +
+              "\nQuantity: " + quantity[index] + "\n\n\nTotal Price: " + totalPrices[index] + "\n\n";
+
+                
+                index++;
+
             }
 
-            else if (order[index] == "Hot") {
-
-                totalPrice[index] = hot * quantity[index];
-            }
-            else if (order[index] == "Cold")
-            {
-                totalPrice[index] = cold * quantity[index];
-
-            } 
-            else if (order[index] == "Regular")
-            {
-                totalPrice[index] = regular * quantity[index];
-            }
-          
-
-           message = message +"Name: " + customerName[index] + "\nContact No: " + contactNo[index] + "\nAddress: " + address[index] + "\nOrder: " + order[index] +
-                "\nQuantity: " + quantity[index] + "\n\n\nTotal Price: " + totalPrice[index] + "\n\n";
 
             orderShowRichTextBox.Text = message;
-            index++;
 
-            customerNameTextBox.Clear();
-            contactNoTextBox.Clear();
-            addressTextBox.Clear();
-            quantityTextBox.Clear();
+
+          customerNameTextBox.Clear();
+          contactNoTextBox.Clear();
+          addressTextBox.Clear();
+         quantityTextBox.Clear();
+            
             
 
         }

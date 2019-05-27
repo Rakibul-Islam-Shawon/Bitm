@@ -8,3 +8,13 @@ E:\2019-Programming Lang\C#\visual studio\Introductiontocsharp\CoffeShop\obj\Deb
 E:\2019-Programming Lang\C#\visual studio\Introductiontocsharp\CoffeShop\obj\Debug\CoffeShop.csproj.CoreCompileInputs.cache
 E:\2019-Programming Lang\C#\visual studio\Introductiontocsharp\CoffeShop\obj\Debug\CoffeShop.exe
 E:\2019-Programming Lang\C#\visual studio\Introductiontocsharp\CoffeShop\obj\Debug\CoffeShop.pdb
+E:\Git\Bitm\CoffeShop\bin\Debug\CoffeShop.exe.config
+E:\Git\Bitm\CoffeShop\bin\Debug\CoffeShop.exe
+E:\Git\Bitm\CoffeShop\bin\Debug\CoffeShop.pdb
+E:\Git\Bitm\CoffeShop\obj\Debug\CoffeShop.csprojAssemblyReference.cache
+E:\Git\Bitm\CoffeShop\obj\Debug\CoffeShop.CoffeShop.resources
+E:\Git\Bitm\CoffeShop\obj\Debug\CoffeShop.Properties.Resources.resources
+E:\Git\Bitm\CoffeShop\obj\Debug\CoffeShop.csproj.GenerateResource.cache
+E:\Git\Bitm\CoffeShop\obj\Debug\CoffeShop.csproj.CoreCompileInputs.cache
+E:\Git\Bitm\CoffeShop\obj\Debug\CoffeShop.exe
+E:\Git\Bitm\CoffeShop\obj\Debug\CoffeShop.pdb
